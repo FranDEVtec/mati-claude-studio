@@ -1,0 +1,9 @@
+.DS_Store
+crudos/*
+referencias/*
+entregas/*
+!crudos/.gitkeep
+!referencias/.gitkeep
+!entregas/.gitkeep
+node_modules/
+.env
