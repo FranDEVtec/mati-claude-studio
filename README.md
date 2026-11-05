@@ -4,28 +4,42 @@ Tu estudio de edición con Claude: le mandás crudos o un reel de referencia, co
 
 ## Instalación
 
-1. Abrí la app **Terminal** (Mac) o **PowerShell** (Windows).
-2. Pegá este comando.
+**1. Instalá Claude Code.** Abrí **Terminal** (Mac) o **PowerShell** (Windows) y pegá:
 
-**Mac**
+Mac:
 ```bash
-git clone https://github.com/FranDEVtec/mati-claude-studio.git ~/mati-claude-studio && bash ~/mati-claude-studio/install.sh
+curl -fsSL https://claude.ai/install.sh | bash
 ```
 
-**Windows**
+Windows:
 ```powershell
-git clone https://github.com/FranDEVtec/mati-claude-studio.git $HOME\mati-claude-studio; powershell -ExecutionPolicy Bypass -File $HOME\mati-claude-studio\install.ps1
+irm https://claude.ai/install.ps1 | iex
 ```
 
-Si te dice que falta `git`, en Mac aceptá la instalación que te ofrece; en Windows instalalo con `winget install Git.Git` y volvé a pegar el comando.
+**2. Abrilo.** Cerrá y volvé a abrir la ventana, escribí `claude` y apretá Enter. La primera vez te pide iniciar sesión con tu cuenta de Claude (necesitás un plan pago).
 
-3. Abrí Claude y escribile **hola**:
+**3. Pegale este mensaje a Claude:**
+
+```text
+Hola Claude. Nunca usé esto, así que guiame paso a paso y sin términos técnicos.
+Instalá mi estudio de edición:
+1. Descargá https://github.com/FranDEVtec/mati-claude-studio en la carpeta mati-claude-studio dentro de mi usuario. Si falta git, instalalo.
+2. Leé install.sh y install.ps1, y contame en dos líneas qué van a instalar.
+3. Corré el que corresponda a mi compu (Mac: install.sh, Windows: install.ps1). Avisame antes si te hace falta mi contraseña, que la escribo yo en la Terminal.
+4. Si algo falla, resolvelo y volvé a comprobar hasta que el chequeo final dé "Listo".
+5. Cuando termine, decime exactamente qué escribir para abrirte dentro de esa carpeta y empezar.
+```
+
+Claude te va a pedir permiso antes de varias acciones: leelas y aprobá las que te cierren.
+
+**4. Empezá.** Abrí Claude dentro de la carpeta y escribile **hola**:
+
 ```bash
 cd ~/mati-claude-studio
 claude
 ```
 
-La primera vez te va a pedir iniciar sesión con tu cuenta de Claude (necesitás un plan pago). Después te guía él.
+Desde ahí te guía él.
 
 ## Cómo se usa
 
@@ -49,11 +63,12 @@ Dejá tus videos en `crudos/` y las referencias en `referencias/`. Lo terminado 
 | `crudos-a-creativos` | De un crudo a 20 anuncios distintos |
 | `guardar-como-skill` | Convierte lo que te gustó en una receta repetible |
 | `seguridad` | Revisa tu compu y cuida tus claves |
+| `skill-stocktake` | Audita tus skills: cuáles sirven, cuáles sobran y cuáles mejorar |
 | HyperFrames, Remotion, watch, ffmpeg | Las herramientas de edición, se instalan solas |
 
 ## Licencias
 
 Este repo no copia skills de terceros: el instalador las baja de sus fuentes oficiales.
 
-- HyperFrames: Apache-2.0. `watch` y `ffmpeg`: MIT.
+- HyperFrames: Apache-2.0. `watch`, `ffmpeg` y `skill-stocktake`: MIT.
 - **Remotion:** es gratis para personas y empresas de hasta 3 empleados. Con más, necesitás licencia de empresa: [remotion.dev/license](https://www.remotion.dev/license). Por eso el sistema edita con HyperFrames y usa Remotion solo si lo pedís. La skill `remotion-license` explica los detalles.

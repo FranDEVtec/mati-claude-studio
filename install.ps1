@@ -21,6 +21,7 @@ if (-not $Check) {
   Add-Pack 'heygen-com/hyperframes' $skills
   Add-Pack 'bradautomates/claude-video' @('watch')
   Add-Pack 'digitalsamba/claude-code-video-toolkit' @('ffmpeg')
+  Add-Pack 'affaan-m/everything-claude-code' @('skill-stocktake')
   Add-Pack 'remotion-dev/skills' $remotion
 }
 Refresh-Path
@@ -28,7 +29,7 @@ Refresh-Path
 foreach ($c in 'git','node','npx','ffmpeg','ffprobe','yt-dlp','claude') {
   if (Get-Command $c -ErrorAction SilentlyContinue) { "  ok  $c" } else { "  FALTA  $c"; $fail = $true }
 }
-foreach ($s in ($skills + $remotion + 'watch','ffmpeg')) {
+foreach ($s in ($skills + $remotion + 'watch','ffmpeg','skill-stocktake')) {
   if (Test-Path "$HOME\.claude\skills\$s\SKILL.md") { "  ok  skill $s" } else { "  FALTA  skill $s"; $fail = $true }
 }
 if ($fail) { "Faltan cosas. Abri claude y pedile que lo resuelva."; exit 1 } else { "Listo. Escribi: cd ~\mati-claude-studio; claude" }

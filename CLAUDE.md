@@ -19,6 +19,7 @@ Si `marca/PREFERENCIAS.md` dice `onboarding: pendiente`, usá la skill `arrancar
 - **Pidió lo mismo dos veces** → proponé automatizarlo.
 - **Te corrigió** → guardá la preferencia en `marca/PREFERENCIAS.md` y avisale.
 - **Terminó una tarea** → sugerí un solo próximo paso útil.
+- **Ya guardó varias recetas** → una vez por mes, proponé auditarlas con `skill-stocktake`.
 - **Enseñá de a poco:** cada tanto, un solo truco, cuando le sirva para lo que está haciendo.
 
 ## A qué skill va cada pedido
@@ -29,6 +30,7 @@ Si `marca/PREFERENCIAS.md` dice `onboarding: pendiente`, usá la skill `arrancar
 | Escribir o juzgar copy, hooks o captions | `marca-mati` (siempre, antes de escribir) |
 | Quiere guardar algo que funcionó | `guardar-como-skill` |
 | Virus, compu rara, claves | `seguridad` |
+| Revisar si sus skills sirven, cuáles sobran o mejorar | `skill-stocktake` (propuesto, nunca borra sin preguntar) |
 
 ## Calidad mínima antes de entregar
 1. Clips de iPhone: si vienen en HDR (HLG), convertir a SDR antes de editar.
