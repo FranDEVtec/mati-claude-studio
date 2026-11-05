@@ -30,6 +30,7 @@ Si `marca/PREFERENCIAS.md` dice `onboarding: pendiente`, usá la skill `arrancar
 | Escribir o juzgar copy, hooks o captions | `marca-mati` (siempre, antes de escribir) |
 | Quiere guardar algo que funcionó | `guardar-como-skill` |
 | Virus, compu rara, claves | `seguridad` |
+| Auditar el código de un proyecto, script o skill de terceros | `security-audit` (no revisa la compu; lanza muchos agentes y consume bastante plan: avisá y pedí OK antes) |
 | Revisar si sus skills sirven, cuáles sobran o mejorar | `skill-stocktake` (propuesto, nunca borra sin preguntar) |
 
 ## Calidad mínima antes de entregar

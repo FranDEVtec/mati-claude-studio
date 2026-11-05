@@ -63,6 +63,7 @@ Dejá tus videos en `crudos/` y las referencias en `referencias/`. Lo terminado 
 | `crudos-a-creativos` | De un crudo a 20 anuncios distintos |
 | `guardar-como-skill` | Convierte lo que te gustó en una receta repetible |
 | `seguridad` | Revisa tu compu y cuida tus claves |
+| `security-audit` | De Cloudflare: audita a fondo el código de proyectos y skills |
 | `skill-stocktake` | Audita tus skills: cuáles sirven, cuáles sobran y cuáles mejorar |
 | HyperFrames, Remotion, watch, ffmpeg | Las herramientas de edición, se instalan solas |
 
@@ -70,5 +71,5 @@ Dejá tus videos en `crudos/` y las referencias en `referencias/`. Lo terminado 
 
 Este repo no copia skills de terceros: el instalador las baja de sus fuentes oficiales.
 
-- HyperFrames: Apache-2.0. `watch`, `ffmpeg` y `skill-stocktake`: MIT.
+- HyperFrames: Apache-2.0. `watch`, `ffmpeg`, `skill-stocktake` y `security-audit`: MIT.
 - **Remotion:** es gratis para personas y empresas de hasta 3 empleados. Con más, necesitás licencia de empresa: [remotion.dev/license](https://www.remotion.dev/license). Por eso el sistema edita con HyperFrames y usa Remotion solo si lo pedís. La skill `remotion-license` explica los detalles.

@@ -24,6 +24,7 @@ if [ "${1:-}" != "--check" ]; then
   add bradautomates/claude-video watch
   add digitalsamba/claude-code-video-toolkit ffmpeg
   add affaan-m/everything-claude-code skill-stocktake
+  add cloudflare/security-audit-skill security-audit
   add remotion-dev/skills "${REMOTION[@]}"
 fi
 export PATH="$HOME/.local/bin:$PATH"
@@ -31,7 +32,7 @@ echo "Comprobación:"
 for c in git node npx ffmpeg ffprobe yt-dlp claude; do
   command -v "$c" >/dev/null && echo "  ok  $c" || { echo "  FALTA  $c"; FAIL=1; }
 done
-for s in "${SKILLS[@]}" "${REMOTION[@]}" watch ffmpeg skill-stocktake; do
+for s in "${SKILLS[@]}" "${REMOTION[@]}" watch ffmpeg skill-stocktake security-audit; do
   [ -f "$HOME/.claude/skills/$s/SKILL.md" ] && echo "  ok  skill $s" || { echo "  FALTA  skill $s"; FAIL=1; }
 done
 if [ "$FAIL" = 0 ]; then echo "Listo. Escribí: cd ~/mati-claude-studio && claude"; else echo "Faltan cosas. Abrí claude y pedile que lo resuelva."; exit 1; fi
